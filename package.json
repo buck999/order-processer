@@ -14,7 +14,7 @@
   },
   "keywords": [],
   "author": "thiago",
-  "license": "ISC",
+  "license": "GPL-3.0-only",
   "description": "",
   "devDependencies": {
     "@types/amqplib": "^0.10.7",
