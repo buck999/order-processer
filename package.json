@@ -1,0 +1,51 @@
+{
+  "name": "order-processer",
+  "version": "1.0.0",
+  "main": "dist/app.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "start:worker": "node dist/worker/rabbitmq.worker.js",
+    "dev": "tsup src/server.ts --watch --onSuccess \"node dist/server.js\"",
+    "dev:worker": "tsup src/worker/rabbitmq.worker.ts --watch --onSuccess \"node dist/worker/rabbitmq.worker.js\"",
+    "build": "tsup ./src",
+    "prettier:fix": "npx prettier --write .",
+    "lint": "eslint . --ext .ts \"src/**/*.ts\" --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "thiago",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/amqplib": "^0.10.7",
+    "@types/cookie-parser": "^1.4.8",
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^5.0.1",
+    "@types/mongodb": "^4.0.6",
+    "@types/node": "^22.13.13",
+    "@types/pg": "^8.11.11",
+    "@typescript-eslint/eslint-plugin": "^8.28.0",
+    "@typescript-eslint/parser": "^8.28.0",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.2.5",
+    "globals": "^16.0.0",
+    "prettier": "3.5.3",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.28.0"
+  },
+  "dependencies": {
+    "amqplib": "^0.10.5",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "envalid": "^8.0.0",
+    "express": "^4.21.2",
+    "mongodb": "^6.15.0",
+    "mongoose": "^8.13.0",
+    "pg": "^8.14.1",
+    "tsup": "^8.4.0"
+  }
+}
